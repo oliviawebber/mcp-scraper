@@ -1,11 +1,15 @@
+import asyncio
+
 import typer
+
+from mcp_scraper.tools import _tools
 
 app = typer.Typer()
 
 
 @app.command()
-def tool(url: str):
-    print(f"Reaching out to {url}...")
+def tools(url: str):
+    asyncio.run(_tools(url))
 
 
 @app.command()
