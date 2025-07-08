@@ -1,3 +1,7 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
 name = "mcp-scraper"
 version = "0.1.0"
@@ -13,3 +17,12 @@ dependencies = [
 dev = [
     "ruff>=0.12.2",
 ]
+
+[project.scripts]
+mcp-scraper = "mcp_scraper:entrypoint.app"
+
+[tool.hatch.build.targets.sdist]
+packages = ["src/mcp_scraper"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mcp_scraper"]
