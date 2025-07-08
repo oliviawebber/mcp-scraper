@@ -1,0 +1,1 @@
+A CLI utility for reading the available endpoints from an MCP server.
