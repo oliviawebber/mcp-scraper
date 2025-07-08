@@ -1,6 +1,9 @@
-def main():
-    print("Hello from mcp-scraper!")
+import typer
+
+
+def main(url: str):
+    print(f"Reaching out to {url}...")
 
 
 if __name__ == "__main__":
-    main()
+    typer.run(main())
